@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+#intro {
+    height: 100vh;                /* Make it full screen height */
+    width: 100vw;                 /* Make it full screen width */
+    max-width: 75rem;             /* Limit the width on large screens */
+    margin: 0 auto;               /* Center the content horizontally */
+    overflow: hidden;             /* Prevent overflowing content */
+    position: relative;           /* Position relative for absolute positioning of background */
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 10%;
+    width: 72%;                  /* Ensure the background covers the full width */
+    height: 100vh;                 /* Ensure the background covers the full height */
+    background-image: url('../../assets/image.jpg');  /* Your image */
+    background-position: center center;  /* Center the background */
+    background-size: cover;            /* Make sure the image covers the container */
+    background-repeat: no-repeat;      /* Prevent the image from repeating */
+    z-index: -1;    
+    opacity: 0.9;                  /* Make sure the background stays behind the content */
+}
+
+.introcontent {
+    height: 100%;                    /* Full height of the section */
+    width: 100%;                     /* Full width of the section */
+    padding: 1rem;
+    font-size: 3rem;                 /* Default font size */
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;         /* Vertically center content */
+    align-items: center;             /* Horizontally center content */
+    text-align: center;              /* Center the text */
+    color: white;
+}
+
+.hello {
+    font-size: 1.7rem;
+    font-weight: 100;
+}
+
+.introname {
+    color: yellow;
+}
+
+.intropara {
+    font-size: medium;
+    font-weight: 100;
+}
+.btncontainer{
+    display: flex;
+    gap: 1rem; /* Space between the two buttons */
+    justify-content: center; /* Center buttons horizontally */
+    flex-wrap: wrap; /* Allow buttons to wrap if the screen is smaller */
+}
+.btn {
+    background: white;
+    margin: 1rem 0;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer; /* Makes the button interactive */
+}
+
+.btn img {
+    object-fit: cover;
+    margin: 0 0.5rem;
+    height: 1rem;
+}.po{
+    height: 2rem;
+}
+
+/* Media Query for smaller screens (max-width: 840px) */
+@media screen and (max-width: 840px) {
+    .bg {
+        top: 0; /* Remove any offset */
+        left: 0;
+        height: 100%; /* Ensure the background covers the full height */
+    }
+
+    .introcontent {
+        font-size: 6vw; /* Scaled down font size based on viewport */
+        padding: 2rem;  /* Adjust padding for mobile */
+    }
+
+    .hello {
+        font-size: 4vw;
+    }
+
+    .btn {
+        padding: 0.5rem 1.5rem;
+    }
+
+    .btn img {
+        height: 0.8rem;
+    }
+
+    .intropara {
+        font-size: 4vw;
+    }
+}

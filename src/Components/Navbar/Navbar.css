@@ -1,0 +1,124 @@
+.Navbar {
+    background: rgb(30,30,30);
+    height: 5rem;
+    width: 100%;
+    max-width: 75rem; /* Maximum size */
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.logo {
+    object-fit: cover; /* Prevents image from expanding */
+    height: 3rem; /* Size */
+    width: 4rem;
+}
+
+.desktop-menulistitem {
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.desktop-menulistitem:hover {
+    color: yellow;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid yellow;
+    padding: 0.5rem;
+}
+
+.desktopmenubtn {
+    background: white;
+    color: black;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+    border-radius: 1rem;
+}
+
+.desktopmenuicon {
+    object-fit: cover;
+    height: 1rem;
+    width: 1rem;
+    margin: 1rem;
+}
+
+/* Media Query for screens with max-width 840px */
+@media screen and (max-width: 840px) {
+    .Navbar {
+        width: 100%;
+        padding: 1rem; /* Reduce padding for smaller screens */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align elements to the left */
+    }
+
+    .logo {
+        height: 2.5rem; /* Smaller logo size */
+        width: 3.5rem; /* Adjust logo width */
+    }
+
+    .desktop-menulistitem {
+        margin: 0.5rem; /* Reduced margin */
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .desktop-menulistitem:hover {
+        border-bottom: 2px solid yellow; 
+      /* Smaller hover effect */
+    }
+
+    .desktopmenubtn {
+        padding: 0.5rem 1rem; /* Adjust button padding for smaller screens */
+        font-size: 1rem; /* Adjust button font size */
+    }
+
+    .desktopmenuicon {
+        height: 0.8rem; /* Adjust icon size */
+        width: 0.8rem; /* Adjust icon size */
+        margin: 0.5rem; /* Adjust margin */
+    }
+}.movemenu{
+   display:none;
+   height: 2rem;
+}
+.navmenu{
+    position: absolute;
+    top:4rem;
+    right: 2rem;
+    z-index: 2;
+    display: flex;
+flex-direction: column;
+padding: 0.5rem;
+height:fit-content;
+min-width: 15rem;
+background: rgb(40,40,40);
+border-radius: 1rem;
+}.listitem{
+    color: white;
+    padding: 0.5rem 3rem;
+    margin: 0.25rem;
+    border-radius: 0.5rem;
+    background:rgb(30, 30, 30);
+}.listitem:hover {
+    color: yellow;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid yellow;
+    padding: 0.5rem;
+}
+@media screen and (max-width:720px) {
+   .movemenu{
+    display: flex;
+   }
+   .desktopmenu{
+    display: none;
+   }
+    .desktopmenubtn{
+        display: none;
+    }
+}
